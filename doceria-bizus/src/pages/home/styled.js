@@ -7,9 +7,5 @@ const Main = styled.main`
     margin: 0;
 `
 
-const Tittle = styled.h1`
-    margin: 0;
-    text-align: center;
-`
 
-export {Main, Tittle}
+export {Main}
