@@ -10,10 +10,10 @@ export default function ProductBox(props) {
             <div className="imageSection">
                 <img src={props.product.image} alt="image_product"/>
             </div>
-            <Tittle size="50">{props.product.name}</Tittle>
+            <Tittle size="50">{props.product.description}</Tittle>
             <Price size="20">R$ {props.product.price}</Price>
             
-            <Button style={{marginTop: "20px"}} width="240px" height="35px">Adicionar ao Carrinho</Button>
+            <Button onClick={() => props.addItemToShoppingCart(props.product)} style={{marginTop: "20px"}} width="240px" height="35px">Adicionar ao Carrinho</Button>
         </Container>
     )
 }

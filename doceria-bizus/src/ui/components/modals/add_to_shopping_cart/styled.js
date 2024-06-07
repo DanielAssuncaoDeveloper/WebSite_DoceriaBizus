@@ -7,6 +7,7 @@ export const Modalparagrafo = styled.p `
     line-height: 51.79px;
     text-align: center;
     `
+    
 export const ModalContent = styled.div `
     box-sizing: border-box;
     position: relative;

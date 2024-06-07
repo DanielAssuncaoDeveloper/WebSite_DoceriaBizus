@@ -7,8 +7,7 @@ export const DivAlt = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 100vh;
-    height: 500px;
+    height: 450px;
 
     display: flex;
     justify-content: start;
@@ -16,14 +15,16 @@ export const DivAlt = styled.div`
 
 export const DivContent = styled.div`
     padding: 0 90px;
-    padding-top: 40px;
+    padding-top: 20px;
 
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
 
     .tittle-container{
         margin-top: 50px;
+        height: 30px;
     }
 `;
 
@@ -44,8 +45,9 @@ export const ImageDiv = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 350px;
-    height: auto;
+    width: 300px;
+    height: 450px;
+
     object-fit: cover;
 
 `;

@@ -1,9 +1,31 @@
-import { Titulo } from "./styled"
+import { useState } from 'react'
 
-export default function Header(){
+import { Container, LogoContainer } from './styled'
+
+import LogoIcon from '../../../assets/icons/logoicon.svg'
+import ShoppingCartIcon from '../../../assets/icons/shopping_cart.svg'
+
+import ShoppingCart from '../modals/shopping_cart'
+
+export default function Header(props){
+    const [useShoppingCart, changeShoppingCart] = useState(false)
+
+    function showShoppingCart(){
+        changeShoppingCart(!useShoppingCart)
+    }
+
     return (
-        <div>
-            <Titulo>Mikhael Otario</Titulo>
-        </div>
+        <Container>
+            {
+                useShoppingCart ? <ShoppingCart cartItens={props.shoppingCartItens} changeShoppingCart={changeShoppingCart} /> : ""
+            }
+            <LogoContainer>
+                <img src={LogoIcon}/>
+            </LogoContainer>
+
+            <div onClick={() => showShoppingCart()} className='shoppingcart-container'>
+                <img src={ShoppingCartIcon}/>
+            </div>
+        </Container>
     )
 } 
