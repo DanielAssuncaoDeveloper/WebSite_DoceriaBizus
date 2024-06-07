@@ -3,6 +3,7 @@ import { React, useState } from 'react';
 import Header from  '../../ui/components/header'
 import Banner from '../../ui/components/banner';
 import ProductsSection from '../../ui/components/products_section';
+import Footer from '../../ui/components/footer'
 
 export default function Home(){
 
@@ -26,11 +27,17 @@ export default function Home(){
         ChangeShoppingCartItens(newItens)
     }
 
+    function removeItem(key){
+        let newItens = shoppingCartItens.filter(x => x.key !== key)
+        ChangeShoppingCartItens(newItens)
+    }
+
     return (
         <>
-            <Header shoppingCartItens={shoppingCartItens} />
+            <Header removeItem={removeItem} shoppingCartItens={shoppingCartItens} />
             <Banner />
             <ProductsSection addItemToShoppingCart={addItemToShoppingCart} />
+            <Footer />
         </>
     )
 }

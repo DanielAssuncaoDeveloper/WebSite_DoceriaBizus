@@ -17,7 +17,7 @@ export default function Header(props){
     return (
         <Container>
             {
-                useShoppingCart ? <ShoppingCart cartItens={props.shoppingCartItens} changeShoppingCart={changeShoppingCart} /> : ""
+                useShoppingCart ? <ShoppingCart removeItem={props.removeItem} cartItens={props.shoppingCartItens} changeShoppingCart={changeShoppingCart} /> : ""
             }
             <LogoContainer>
                 <img src={LogoIcon}/>

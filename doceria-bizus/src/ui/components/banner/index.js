@@ -3,18 +3,18 @@ import { Image, DivAlt, DivContent, ImageDiv, DivTitle } from './styled';
 
 import { Tittle, Text } from '../../styles/styledTexts';
 
-export default function Banner(){
+export default function Banner() {
     return (
         <DivAlt>
             <DivContent>
                 <div className='tittle-container'>
                     <Tittle size="110">Doceria Bizus</Tittle>
                     <Text size="22" width="660px">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        Explore um mundo de sabores irresistíveis em nosso site, onde cada doce é uma experiência única. Dos clássicos brigadeiros aos deliciosos churros e aos irresistíveis beijinhos, oferecemos uma variedade de guloseimas artesanais para adoçar seu dia.
                     </Text>
                 </div>
                 <ImageDiv>
-                    <Image src={bannerImage} alt='Foto brigadeiros'/>
+                    <Image src={bannerImage} alt='Foto brigadeiros' />
                 </ImageDiv>
             </DivContent>
         </DivAlt>

@@ -39,7 +39,7 @@ export default function ShoppingCart(props){
 
                                         <InputSpinner number={x.mount} className="inputSpinner" />
                                         
-                                        <span className="remove-item">
+                                        <span onClick={() => props.removeItem(x.key)} className="remove-item">
                                             <img src={DeleteIcon} />
                                         </span>
                                     </div>

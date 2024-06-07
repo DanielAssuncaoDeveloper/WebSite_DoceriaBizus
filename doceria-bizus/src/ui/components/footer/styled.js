@@ -8,6 +8,8 @@ export const ContainerDiv = styled.div`
     background-image: linear-gradient(rgb(134, 62, 23) 40%, rgb(181, 96, 50) 100%);
     display: flex;
     flex-direction: column;
+    padding: 30px 0;
+
     align-items: center;
     color: white;
 `
@@ -25,14 +27,14 @@ export const IconsDiv = styled.div`
 
 export const ImagePaddingI = styled.img`
     filter: invert(1);
-    padding-right: 5px;
-    width: 40%;
-    height: 40%;
+    padding-right: 10px;
+    width: 40px;
+    height: 40px;
 `
 
 export const ImagePaddingW = styled.img`
     filter: invert(1);
-    padding-left: 5px;
-    width: 40%;
-    height: 40%;
+    padding-left: 10px;
+    width: 40px;
+    height: 40px;
 `
