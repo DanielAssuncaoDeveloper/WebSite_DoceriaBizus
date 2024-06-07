@@ -40,5 +40,69 @@ export const Modal = styled.div`
         cursor: pointer;
     }
 
+    .gridItens{
+        margin-top: 50px;
+        height: 300px;
+    }
+
+    .itemProduct{
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+
+    }
+
+    .product-description{
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-left: 20px;
+    }
+
+    .product-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        img{
+            height: 70px;
+        }
+    }
+    
+    .inputSpinner{
+        flex-grow: 2;
+    }
+
+    .remove-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        cursor: pointer;
+
+        img {
+            height: 35px;
+        }
+
+    }
+
+    .container-buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        margin-top: 50px;
+    }
+
+    .itens-not-found{
+        width: 100% !important;
+
+        text-align: center;
+    }
 
 `

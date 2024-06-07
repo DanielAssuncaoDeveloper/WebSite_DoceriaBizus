@@ -3,8 +3,8 @@ import {useState} from 'react'
 
 import { SpinnerContainer } from "./styled"
 
-export default function InputSpinner() {   
-    const [number, setNumber] = useState(0);
+export default function InputSpinner(props) {   
+    const [number, setNumber] = useState(props.number);
 
     const ChangeNumber = (numberSum) => {
         setNumber(number+numberSum)

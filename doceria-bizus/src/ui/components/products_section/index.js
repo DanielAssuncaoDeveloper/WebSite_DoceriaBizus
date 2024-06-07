@@ -9,7 +9,13 @@ import BrigadeiroBeijinhoImg from '../../../assets/pictures/brigadeiro_beijinho.
 import { Container } from "./styled"
 import { Tittle } from '../../styles/styledTexts'
 
-export default function ProductsSection() {
+const products = [
+    { idProduct: 1, description: "Churros", price: 230.99, image: BrigadeiroChurrosImg },
+    { idProduct: 2, description: "Tradicional", price: 230.99, image: BrigadeiroTradicionalImg },
+    { idProduct: 3, description: "Beijinho", price: 230.99, image: BrigadeiroBeijinhoImg }
+]
+
+export default function ProductsSection(props) {
     return (
         <Container>
             <div className="tittleSection">
@@ -19,13 +25,13 @@ export default function ProductsSection() {
                 <div className="lineTittle"></div>
             </div>
             <section className="productsSection">
-                <ButtonNext direction="LEFT" />
                 <section className="productSlider">
-                    <ProductBox product={{ name: "Churros", price: 230.99, image: BrigadeiroChurrosImg }} />
-                    <ProductBox product={{ name: "Tradicional", price: 230.99, image: BrigadeiroTradicionalImg }} />
-                    <ProductBox product={{ name: "Beijinho", price: 230.99, image: BrigadeiroBeijinhoImg }} />
-                </section>
-                <ButtonNext direction="RIGTH" />
+                    {
+                        products.map(x => 
+                            <ProductBox addItemToShoppingCart={props.addItemToShoppingCart} product={x} />
+                        )
+                    }
+                 </section>
             </section>
         </Container>
     )

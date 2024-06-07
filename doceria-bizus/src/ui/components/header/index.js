@@ -1,16 +1,29 @@
+import { useState } from 'react'
+
 import { Container, LogoContainer } from './styled'
 
 import LogoIcon from '../../../assets/icons/logoicon.svg'
 import ShoppingCartIcon from '../../../assets/icons/shopping_cart.svg'
 
-export default function Header(){
+import ShoppingCart from '../modals/shopping_cart'
+
+export default function Header(props){
+    const [useShoppingCart, changeShoppingCart] = useState(false)
+
+    function showShoppingCart(){
+        changeShoppingCart(!useShoppingCart)
+    }
+
     return (
         <Container>
+            {
+                useShoppingCart ? <ShoppingCart cartItens={props.shoppingCartItens} changeShoppingCart={changeShoppingCart} /> : ""
+            }
             <LogoContainer>
                 <img src={LogoIcon}/>
             </LogoContainer>
 
-            <div className='shoppingcart-container'>
+            <div onClick={() => showShoppingCart()} className='shoppingcart-container'>
                 <img src={ShoppingCartIcon}/>
             </div>
         </Container>
