@@ -1,7 +1,12 @@
 import React from 'react';
-import ModalCarrinho from '../../ui/components/modal-adicionar-ao-carrinho/index';
+
+import Header from '../../ui/components/header';
 import { Button } from '../../ui/styles/styledInputs';
 
 export default function TestComponents(){
-    return (<ModalCarrinho/>)
+    return (
+        <>
+            <Header/>
+        </>
+    )
 }
