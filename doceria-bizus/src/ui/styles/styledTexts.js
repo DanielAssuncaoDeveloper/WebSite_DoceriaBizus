@@ -5,7 +5,6 @@ const Tittle = styled.h1`
     font-weight: 400;
     font-style: normal;
 
-    width: auto;
     margin: 0;
     font-size: ${props => props.size !== undefined ? props.size : "150"}px;
     color: ${props => props.color !== undefined ? props.color : "#FFE5D2"};
@@ -16,7 +15,9 @@ const Text = styled.a`
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    display: flex;
 
+    width: ${props => props.width !== undefined ? props.width : "auto"};
     font-size: ${props => props.size !== undefined ? props.size : "150"}px;
     color: ${props => props.color !== undefined ? props.color : "#FFE5D2"};
 `
