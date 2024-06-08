@@ -1,7 +1,20 @@
 import styled from "styled-components";
 
-export const Modalparagrafo = styled.p `
+export const Conteiner = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(2px);
+
+    position: fixed;
+    top: 0px;
+`
+
+export const Modalparagrafo = styled.p `
     font-size: 42px;
     font-weight: 400;
     line-height: 51.79px;

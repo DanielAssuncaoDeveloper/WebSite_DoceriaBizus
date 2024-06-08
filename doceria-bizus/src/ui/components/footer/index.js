@@ -17,7 +17,7 @@ export default function Footer() {
                 </a>
             </IconsDiv>
             <FooterDiv>
-                <FooterStyle>Info • Support • Marketing</FooterStyle>
+                <FooterStyle>Sobre • Suporte • Marketing</FooterStyle>
                 <FooterStyle>Termos de uso • Política de privacidade</FooterStyle>
                 <FooterStyle>© 2024 Doceria Bizus</FooterStyle>
             </FooterDiv>

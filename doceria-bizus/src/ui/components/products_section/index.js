@@ -1,10 +1,12 @@
+import { useState } from "react"
 import ProductBox from "../product_box"
-import ButtonNext from "./button-next"
 
 import BrigadeiroChurrosImg from '../../../assets/pictures/brigadeiro_churros.png'
 import BrigadeiroTradicionalImg from '../../../assets/pictures/brigadeiro_tradicional.png'
 import BrigadeiroBeijinhoImg from '../../../assets/pictures/brigadeiro_beijinho.png'
 
+
+import ModalCarrinho from '../../../ui/components/modals/add_to_shopping_cart/index.js'
 
 import { Container } from "./styled"
 import { Tittle } from '../../styles/styledTexts'
@@ -16,8 +18,17 @@ const products = [
 ]
 
 export default function ProductsSection(props) {
+    const [useModalMarkert, changeModalMarket] = useState(false)
+
+    function showModalMarket() {
+        changeModalMarket(!useModalMarkert)
+    }
+
     return (
         <Container>
+            {
+                useModalMarkert ? <ModalCarrinho showShoppingCart={props.showShoppingCart} showModalMarket={showModalMarket}/> : ""
+            }
             <div className="tittleSection">
                 <Tittle size="85" color="#652807">
                     Brigadeiros
@@ -27,11 +38,11 @@ export default function ProductsSection(props) {
             <section className="productsSection">
                 <section className="productSlider">
                     {
-                        products.map(x => 
-                            <ProductBox addItemToShoppingCart={props.addItemToShoppingCart} product={x} />
+                        products.map(x =>
+                            <ProductBox showModalMarket={showModalMarket} addItemToShoppingCart={props.addItemToShoppingCart} product={x} />
                         )
                     }
-                 </section>
+                </section>
             </section>
         </Container>
     )

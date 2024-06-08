@@ -26,15 +26,18 @@ export const IconsDiv = styled.div`
 `
 
 export const ImagePaddingI = styled.img`
-    filter: invert(1);
+    fill: #FFE5D2;
     padding-right: 10px;
     width: 40px;
     height: 40px;
 `
 
 export const ImagePaddingW = styled.img`
-    filter: invert(1);
     padding-left: 10px;
     width: 40px;
     height: 40px;
+    
+    svg{
+        fill: #FFE5D2;
+    }
 `

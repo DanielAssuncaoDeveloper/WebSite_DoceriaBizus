@@ -8,6 +8,11 @@ import Footer from '../../ui/components/footer'
 export default function Home(){
 
     const [shoppingCartItens, ChangeShoppingCartItens] = useState([])
+    const [useShoppingCart, changeShoppingCart] = useState(false)
+
+    function showShoppingCart(){
+        changeShoppingCart(!useShoppingCart)
+    }
 
     function addItemToShoppingCart(product){
         let item = shoppingCartItens.find(x => x.idProduct === product.idProduct)        
@@ -34,9 +39,9 @@ export default function Home(){
 
     return (
         <>
-            <Header removeItem={removeItem} shoppingCartItens={shoppingCartItens} />
+            <Header useShoppingCart={useShoppingCart} showShoppingCart={showShoppingCart} removeItem={removeItem} shoppingCartItens={shoppingCartItens} />
             <Banner />
-            <ProductsSection addItemToShoppingCart={addItemToShoppingCart} />
+            <ProductsSection showShoppingCart={showShoppingCart} addItemToShoppingCart={addItemToShoppingCart} />
             <Footer />
         </>
     )

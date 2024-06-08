@@ -1,16 +1,21 @@
-import {Button} from '../../styles/styledInputs'
+import { Conteiner, Modalparagrafo, ModalContent, Modal, ModalCButton, GoToCart, ContinueShopping } from './styled'
 
-import { Modalparagrafo,ModalContent, Modal, ModalCButton,GoToCart,ContinueShopping } from './styled'
+export default function ModalCarrinho(props) {
 
-export default function ModalCarrinho() {
     return (
-        <Modal>
-            <ModalContent>
-                <ModalCButton>&times;</ModalCButton>
-                <Modalparagrafo>Pedido adicionado ao Carrinho com Sucesso!</Modalparagrafo>
-                <GoToCart>Ir para o Carrinho</GoToCart>
-                <ContinueShopping> Continuar Comprando</ContinueShopping>
-            </ModalContent>
-        </Modal>
+        <Conteiner>
+            <Modal>
+                <ModalContent>
+                    <ModalCButton>&times;</ModalCButton>
+                    <Modalparagrafo>Pedido adicionado ao Carrinho com Sucesso!</Modalparagrafo>
+                    <GoToCart onClick={() => {
+                            props.showModalMarket()
+                            props.showShoppingCart()
+                        }}
+                    >Ir para o Carrinho</GoToCart>
+                    <ContinueShopping onClick={() => props.showModalMarket()}> Continuar Comprando</ContinueShopping>
+                </ModalContent>
+            </Modal>
+        </Conteiner>
     )
 }
